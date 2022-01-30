@@ -27,7 +27,7 @@ player.ontimeupdate = function () {
     current.innerHTML = timeFormat(ct);
     //progress
     let duration = player.duration;
-    prog = Math.floor((ct * 100) / duration);
+    prog = (ct * 100) / duration;
     progress.style.setProperty("--progress", prog + "%");
 }
 
