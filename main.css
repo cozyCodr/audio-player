@@ -18,14 +18,14 @@ body {
 }
 
 .player {
-    width: 70%;
+    width: 640px;
     background-color: var(--bg);
-    display: grid;
-    grid-template-columns: 48px 1fr 48px;
-    grid-gap: 16px; 
-    padding: 1px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 1px 10px;
     position: relative;
-    border-radius: 25px;
+    border-radius: 100px;
 }
 
 .control, #current {
@@ -61,14 +61,14 @@ body {
 
 .bar {
     --space: -4px;
-    background-color: #24242424;
+    background-color: #f10b0bf3;
     overflow: hidden;
     left: var(--space);
     right: var(--space);
     top: var(--space);
     bottom: var(--space);
     position: absolute;
-    border-radius: 64px;
+    border-radius: 100px;
     z-index: -2;
 }
 
@@ -78,4 +78,19 @@ body {
     background-color: white;
     transition: width 1s linear;
     height: 100%;
+}
+
+@media screen and (max-width: 475px) {
+    .player {
+        width: 90%;
+        background-color: var(--bg);
+        justify-content: space-around;
+        align-items: center; 
+        padding: 1px 10px;
+        position: relative;
+    }
+
+    #title {
+        font-size: 12px;
+    }
 }
